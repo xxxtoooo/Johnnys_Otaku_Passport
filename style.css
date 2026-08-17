@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff7fb;
+  color: #5b4b52;
+  font-family: Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 25px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin-top: 10px;
+}
+
+main {
+  width: min(1100px, 94%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: start;
+}
+
+.form-area,
+.preview-area {
+  background: white;
+  border-radius: 24px;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(150, 100, 120, 0.12);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+h3 {
+  margin-top: 28px;
+  border-bottom: 2px solid #ffe0ec;
+  padding-bottom: 8px;
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 7px;
+  padding: 12px;
+  border: 1px solid #eadde3;
+  border-radius: 12px;
+  font: inherit;
+  background: #fffafb;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.check {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.check input {
+  width: auto;
+}
+
+.notice {
+  font-size: 12px;
+  color: #947d87;
+  line-height: 1.6;
+}
+
+.passport {
+  background: linear-gradient(135deg, #fff, #fff3f8);
+  border: 3px solid #e7b6cb;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(160, 100, 130, 0.18);
+}
+
+.passport-header {
+  padding: 18px 22px;
+  background: #f7d7e5;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.passport-body {
+  padding: 22px;
+  display: flex;
+  gap: 20px;
+}
+
+.passport-icon {
+  width: 100px;
+  height: 125px;
+  border: 2px dashed #d5a5ba;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 38px;
+  flex-shrink: 0;
+}
+
+.passport-info {
+  flex: 1;
+}
+
+.passport-info > div {
+  margin-bottom: 12px;
+}
+
+small {
+  display: block;
+  color: #a27d8d;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+strong {
+  display: block;
+  margin-top: 2px;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.passport-section {
+  padding: 13px 22px;
+  border-top: 1px dashed #dcbccc;
+}
+
+.passport-section p {
+  margin: 5px 0 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.next-live {
+  background: #fff0f6;
+}
+
+.passport-footer {
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #a27d8d;
+}
+
+.main-button,
+.sub-button,
+#addHistory {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.main-button {
+  background: #e8a8c4;
+  color: white;
+}
+
+.sub-button {
+  background: #f4e7ed;
+  color: #705964;
+}
+
+#addHistory {
+  background: #fff0f6;
+  color: #a25f7e;
+}
+
+.history-item {
+  background: #fff8fb;
+  border: 1px solid #f0dce5;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.history-item button {
+  border: none;
+  background: none;
+  color: #c47798;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px;
+  color: #aa8b99;
+}
+
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
