@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>推しパスポート♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🪪 推しパスポート</h1>
+  <p>オタクのための、推し活プロフィールカード♡</p>
+</header>
+
+<main>
+
+  <!-- 入力フォーム -->
+  <section class="form-area">
+
+    <h2>パスポートを作る</h2>
+
+    <label>
+      名前
+      <input id="name" type="text" placeholder="オタクネームなど">
+    </label>
+
+    <label>
+      推し
+      <input id="oshi" type="text" placeholder="グループ名・メンバー名など">
+    </label>
+
+    <label>
+      同担
+      <select id="tan">
+        <option value="大歓迎">大歓迎 🫶🏻</option>
+        <option value="人による">人による 🤔</option>
+        <option value="拒否">拒否 🙅🏻‍♀️</option>
+      </select>
+    </label>
+
+    <label>
+      同担についての一言（任意）
+      <input id="tanNote" type="text" placeholder="例：同年代の方だと嬉しいです♡">
+    </label>
+
+    <label>
+      年代
+      <select id="age">
+        <option value="">非公開</option>
+        <option value="10代">10代</option>
+        <option value="20代">20代</option>
+        <option value="30代">30代</option>
+        <option value="40代">40代</option>
+        <option value="50代〜">50代〜</option>
+      </select>
+    </label>
+
+    <label>
+      住み
+      <select id="area">
+        <option value="">非公開</option>
+        <option value="北海道">北海道</option>
+        <option value="東北">東北</option>
+        <option value="関東">関東</option>
+        <option value="北陸">北陸</option>
+        <option value="東海">東海</option>
+        <option value="近畿">近畿</option>
+        <option value="中国">中国</option>
+        <option value="四国">四国</option>
+        <option value="九州・沖縄">九州・沖縄</option>
+      </select>
+    </label>
+
+    <label>
+      雰囲気
+      <input id="mood" type="text" placeholder="🎀 ふわふわ系 / 🖤 現場系 など自由に！">
+    </label>
+
+    <h3>📱 SNS</h3>
+
+    <label>
+      X
+      <input id="x" type="text" placeholder="@username">
+    </label>
+
+    <label>
+      Instagram
+      <input id="instagram" type="text" placeholder="@username">
+    </label>
+
+    <label>
+      YouTube
+      <input id="youtube" type="text" placeholder="チャンネル名など">
+    </label>
+
+    <label>
+      TikTok
+      <input id="tiktok" type="text" placeholder="@username">
+    </label>
+
+    <label>
+      その他SNS
+      <input id="otherSNS" type="text" placeholder="サービス名・IDなど">
+    </label>
+
+    <label>
+      好きな会場
+      <input id="venue" type="text" placeholder="例：大阪城ホール">
+    </label>
+
+    <h3>🎤 ライブ参戦歴</h3>
+
+    <div id="historyList"></div>
+
+    <button type="button" id="addHistory">
+      ＋ 参戦歴を追加
+    </button>
+
+    <h3>🎫 次回参戦予定</h3>
+
+    <label>
+      公演名
+      <input id="nextLive" type="text" placeholder="例：○○ LIVE TOUR 2026">
+    </label>
+
+    <label>
+      日程
+      <input id="nextDate" type="date">
+    </label>
+
+    <label>
+      公演
+      <select id="nextSession">
+        <option value="">選択してください</option>
+        <option value="昼公演">昼公演</option>
+        <option value="夜公演">夜公演</option>
+        <option value="その他">その他</option>
+      </select>
+    </label>
+
+    <label class="check">
+      <input id="nextPublic" type="checkbox">
+      同じ公演に参戦予定の人に表示する
+    </label>
+
+    <label>
+      一言
+      <textarea id="message" placeholder="仲良くしてくれるお友達募集中♡"></textarea>
+    </label>
+
+    <label class="check">
+      <input id="public" type="checkbox">
+      推しパスポートを公開プロフィールに掲載する
+    </label>
+
+    <p class="notice">
+      ※公開プロフィールには、住所・学校名・最寄り駅などの個人情報を書かないでください。
+    </p>
+
+  </section>
+
+
+  <!-- プレビュー -->
+  <section class="preview-area">
+
+    <h2>プレビュー</h2>
+
+    <div id="passport" class="passport">
+
+      <div class="passport-header">
+        <span>OSHI PASSPORT</span>
+        <span>♡</span>
+      </div>
+
+      <div class="passport-body">
+
+        <div class="passport-icon">
+          🪪
+        </div>
+
+        <div class="passport-info">
+
+          <div>
+            <small>NAME</small>
+            <strong id="p-name">---</strong>
+          </div>
+
+          <div>
+            <small>OSHI</small>
+            <strong id="p-oshi">---</strong>
+          </div>
+
+          <div>
+            <small>同担</small>
+            <strong id="p-tan">---</strong>
+          </div>
+
+          <div>
+            <small>年代 / 住み</small>
+            <strong id="p-age-area">---</strong>
+          </div>
+
+          <div>
+            <small>雰囲気</small>
+            <strong id="p-mood">---</strong>
+          </div>
+
+          <div>
+            <small>好きな会場</small>
+            <strong id="p-venue">---</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="passport-section">
+        <small>SNS</small>
+        <p id="p-sns">---</p>
+      </div>
+
+      <div class="passport-section">
+        <small>LIVE HISTORY</small>
+        <div id="p-history">---</div>
+      </div>
+
+      <div class="passport-section next-live">
+        <small>NEXT LIVE</small>
+        <p id="p-next">---</p>
+      </div>
+
+      <div class="passport-section">
+        <small>MESSAGE</small>
+        <p id="p-message">---</p>
+      </div>
+
+      <div class="passport-footer">
+        <span>THIS PASSPORT BELONGS TO AN OTAKU ♡</span>
+      </div>
+
+    </div>
+
+    <button id="saveImage" class="main-button">
+      🖼️ 画像として保存
+    </button>
+
+    <button id="reset" class="sub-button">
+      入力をリセット
+    </button>
+
+  </section>
+
+</main>
+
+<footer>
+  © ジャニオタパスポート
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
